@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=IBM+Plex+Sans:wght@300&family=Noto+Sans:wght@200&family=Titillium+Web:wght@300&family=Whisper&display=swap" rel="stylesheet">
+     
+    <style>
+        body{
+            background-color: rgb(122, 213, 255)
+        }
+             .info{
+            background-color: rgb(248, 248, 248);
+            position: absolute;
+            width: 600px;
+            height: 130px;
+            top: 0;
+            border-radius: 5px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        h3{
+            font-size: 21px;
+            margin-top: 2%;
+            font-family: 'Noto Sans', sans-serif;
+            text-align: center;
+        }
+           input{
+            position: absolute;
+            margin: auto;
+            left: -134px;
+            right: 0;
+            top: 43%;
+            height: 43px;
+            width: 288px;
+            padding-left: 4%;
+            padding-right: 2%;
+            font-size: 18px;
+            border: none;
+            background-color: rgb(228, 226, 226);
+            border-radius: 20px;
+            outline: none;
+        }
+        input:hover{
+            outline: none;
+
+        }
+        button{
+            height: 38px;
+            width: 93px;
+            position: absolute;
+            background-color: rgb(0, 140, 255);
+            border: none;
+            color: white;
+            font-size: 17px;    
+        border-radius:30px ;   
+         margin: auto;
+         left: 350px;
+         right: 0;
+         top: 60px;
+    }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h3>Enter Your Name : </h3>
+    <input type="text" id="name" placeholder="Enter Your Name">
+     
+    <button id="btn" onclick="data()">Submit</button>
+</div>
+</body>
+<script>
+    let name = document.querySelector('#name');
+    let btn = document.querySelector('#btn');
+    data = () =>{
+        if(name.value == ''){
+            alert('Please enter your name')
+        }
+        else{
+            window.location.href = './decision.html'
+        }
+        localStorage.setItem('name', name.value)
+    }
+    
+</script>
+</html>
